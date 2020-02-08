@@ -1,1 +1,1 @@
-git init
+NOVAYA STROKA V CLONE 
