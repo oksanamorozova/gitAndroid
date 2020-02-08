@@ -1,0 +1,74 @@
+git init
+
+git add git.txt
+git commit -m hi
+
+git remote add origin https://github.com/oksanamorozova/gitAndroid.git
+
+git push -u origin master
+
+git checkout -b develop
+
+git push origin develop
+
+git checkout -b develop2
+
+git push origin develop2
+
+git branch -a
+  develop
+* develop2
+  master
+  remotes/origin/develop
+  remotes/origin/develop2
+  remotes/origin/master
+
+git add git.txt
+git commit -m second
+git push origim develop2
+
+git clone https://github.com/oksanamorozova/gitAndroid
+cd gitAndroid
+
+git checkout -b develop2_copy
+
+git add git.txt
+git commit -m clone
+git push origin develop2_copy
+
+git checkout develop
+
+git merge origin/develop2
+Updating cf51192..9c22f88
+Fast-forward
+ git.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+git push origin develop
+
+git merge develop2_copy
+""" Auto-merging git.txt
+CONFLICT (content): Merge conflict in git.txt
+Automatic merge failed; fix conflicts and then commit the result. """"
+
+git status
+""""  On branch develop
+Your branch is up to date with 'origin/develop'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   git.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")  """
+
+git.txt
+
+git add git.txt
+
+git commit -m " merge develop & develop2_copy"
+
+git push origin develop
