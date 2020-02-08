@@ -1,3 +1,5 @@
 git init
 git add git.txt
 git commit -m hi
+NOVAYA STROKA V CLONE 
+
